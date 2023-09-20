@@ -1,0 +1,6 @@
+
+docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=Jorge21176439" -e "MSSQL_PID=Express" -p 38001:1433 -d --name=MsSqlDev38001 mcr.microsoft.com/mssql/server:latest 
+
+docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=Jorge21176439" -e "MSSQL_PID=Express" -p 38000:1433 -d --name=MsSqlPrd38000 mcr.microsoft.com/mssql/server:latest 
+
+Server=localhost,38001;Database=Concesionario;Persist Security Info=True;User ID=sa;Password=Jorge21176439;TrustServerCertificate=True;Encrypt=False;MultiSubnetFailover=True
